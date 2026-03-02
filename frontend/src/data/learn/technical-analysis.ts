@@ -1,0 +1,148 @@
+import { Resource } from "./types";
+
+export const technicalAnalysisResources: Resource[] = [
+  {
+    id: "ta-001",
+    title: "Technical Analysis: What It Is and How to Use It",
+    url: "https://www.investopedia.com/terms/t/technicalanalysis.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Introduction to technical analysis, its core principles, and how it differs from fundamental analysis.",
+    tags: ["overview", "chart analysis", "price action"],
+    isFree: true,
+  },
+  {
+    id: "ta-002",
+    title: "Moving Averages: What They Are and How to Use Them",
+    url: "https://www.investopedia.com/terms/m/movingaverage.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Explains simple and exponential moving averages, crossover signals, and how to use them for trend identification.",
+    tags: ["moving averages", "SMA", "EMA", "trend"],
+    isFree: true,
+  },
+  {
+    id: "ta-003",
+    title: "Relative Strength Index (RSI)",
+    url: "https://www.investopedia.com/terms/r/rsi.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How RSI measures overbought and oversold conditions and generates buy/sell signals in a momentum oscillator.",
+    tags: ["RSI", "momentum", "oscillator", "overbought"],
+    isFree: true,
+  },
+  {
+    id: "ta-004",
+    title: "MACD Indicator Explained",
+    url: "https://www.investopedia.com/terms/m/macd.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "The Moving Average Convergence Divergence indicator, signal line crossovers, and histogram interpretation.",
+    tags: ["MACD", "momentum", "crossover", "signal"],
+    isFree: true,
+  },
+  {
+    id: "ta-005",
+    title: "Bollinger Bands",
+    url: "https://www.investopedia.com/terms/b/bollingerbands.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How Bollinger Bands use standard deviations around a moving average to identify volatility and potential price breakouts.",
+    tags: ["Bollinger Bands", "volatility", "standard deviation"],
+    isFree: true,
+  },
+  {
+    id: "ta-006",
+    title: "Support and Resistance Basics",
+    url: "https://www.investopedia.com/trading/support-and-resistance-basics/",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Identifying key price levels where buying or selling pressure tends to emerge, and how to trade around them.",
+    tags: ["support", "resistance", "price levels"],
+    isFree: true,
+  },
+  {
+    id: "ta-007",
+    title: "Candlestick Chart Patterns",
+    url: "https://www.investopedia.com/trading/candlestick-charting-what-is-it/",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Reading candlestick charts and recognizing common patterns like doji, hammer, engulfing, and shooting star.",
+    tags: ["candlestick", "chart patterns", "doji", "hammer"],
+    isFree: true,
+  },
+  {
+    id: "ta-008",
+    title: "TradingView — Free Charting Platform",
+    url: "https://www.tradingview.com/",
+    source: "TradingView",
+    type: "interactive",
+    difficulty: "beginner",
+    description:
+      "Popular web-based charting platform with real-time data, drawing tools, and a wide range of technical indicators.",
+    tags: ["charting", "tool", "indicators", "real-time"],
+    isFree: true,
+  },
+  {
+    id: "ta-009",
+    title: "StockCharts ChartSchool",
+    url: "https://school.stockcharts.com/doku.php",
+    source: "StockCharts",
+    type: "course",
+    difficulty: "intermediate",
+    description:
+      "Comprehensive free educational resource covering chart types, overlays, indicators, and market analysis techniques.",
+    tags: ["education", "indicators", "chart types", "course"],
+    isFree: true,
+  },
+  {
+    id: "ta-010",
+    title: "Fibonacci Retracement Levels",
+    url: "https://www.investopedia.com/terms/f/fibonacciretracement.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How Fibonacci ratios are used to identify potential support and resistance levels after a price move.",
+    tags: ["Fibonacci", "retracement", "support", "resistance"],
+    isFree: true,
+  },
+  {
+    id: "ta-011",
+    title: "Volume Analysis in Trading",
+    url: "https://www.investopedia.com/terms/v/volume.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "Why trading volume matters, how to interpret volume spikes, and using volume to confirm price trends.",
+    tags: ["volume", "confirmation", "trend"],
+    isFree: true,
+  },
+  {
+    id: "ta-012",
+    title: "Head and Shoulders Pattern",
+    url: "https://www.investopedia.com/terms/h/head-shoulders.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "Identifying the head and shoulders reversal pattern and using it to predict trend changes.",
+    tags: ["head and shoulders", "reversal", "chart patterns"],
+    isFree: true,
+  },
+];

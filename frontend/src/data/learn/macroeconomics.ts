@@ -1,0 +1,148 @@
+import { Resource } from "./types";
+
+export const macroeconomicsResources: Resource[] = [
+  {
+    id: "me-001",
+    title: "Introduction to Macroeconomics",
+    url: "https://www.investopedia.com/terms/m/macroeconomics.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Overview of macroeconomics, its key concepts, and how large-scale economic factors affect financial markets.",
+    tags: ["macroeconomics", "overview", "economy"],
+    isFree: true,
+  },
+  {
+    id: "me-002",
+    title: "Understanding the Business Cycle",
+    url: "https://www.investopedia.com/terms/b/businesscycle.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "The four phases of the business cycle — expansion, peak, contraction, and trough — and their impact on investing.",
+    tags: ["business cycle", "expansion", "recession", "phases"],
+    isFree: true,
+  },
+  {
+    id: "me-003",
+    title: "What Is Inflation?",
+    url: "https://www.investopedia.com/terms/i/inflation.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "How inflation erodes purchasing power, what causes it, and how it affects stock and bond markets.",
+    tags: ["inflation", "CPI", "purchasing power"],
+    isFree: true,
+  },
+  {
+    id: "me-004",
+    title: "How Interest Rates Affect the Stock Market",
+    url: "https://www.investopedia.com/articles/06/interestaffectsmarket.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "The relationship between Federal Reserve rate decisions and equity valuations, borrowing costs, and investor behavior.",
+    tags: ["interest rates", "Federal Reserve", "stock market"],
+    isFree: true,
+  },
+  {
+    id: "me-005",
+    title: "Understanding GDP",
+    url: "https://www.investopedia.com/terms/g/gdp.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "What gross domestic product measures, how it's calculated, and why it's the primary indicator of economic health.",
+    tags: ["GDP", "economic growth", "indicator"],
+    isFree: true,
+  },
+  {
+    id: "me-006",
+    title: "Khan Academy: Macroeconomics",
+    url: "https://www.khanacademy.org/economics-finance-domain/macroeconomics",
+    source: "Khan Academy",
+    type: "course",
+    difficulty: "beginner",
+    description:
+      "Free comprehensive course covering GDP, unemployment, inflation, monetary and fiscal policy with practice exercises.",
+    tags: ["course", "GDP", "monetary policy", "fiscal policy"],
+    isFree: true,
+  },
+  {
+    id: "me-007",
+    title: "FRED Economic Data — Federal Reserve",
+    url: "https://fred.stlouisfed.org/",
+    source: "Federal Reserve (FRED)",
+    type: "interactive",
+    difficulty: "intermediate",
+    description:
+      "Free access to hundreds of thousands of economic data series from the Federal Reserve Bank of St. Louis.",
+    tags: ["FRED", "data", "Federal Reserve", "tool"],
+    isFree: true,
+  },
+  {
+    id: "me-008",
+    title: "Yield Curve: What It Is and Why It Matters",
+    url: "https://www.investopedia.com/terms/y/yieldcurve.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How the yield curve signals economic expectations and why inversions have historically preceded recessions.",
+    tags: ["yield curve", "bonds", "recession indicator"],
+    isFree: true,
+  },
+  {
+    id: "me-009",
+    title: "How the Economic Machine Works — Ray Dalio",
+    url: "https://www.youtube.com/watch?v=PHe0bXAIuk0",
+    source: "YouTube (Ray Dalio)",
+    type: "video",
+    difficulty: "beginner",
+    description:
+      "30-minute animated video explaining credit cycles, deleveraging, and how the economy works in simple terms.",
+    tags: ["credit cycle", "deleveraging", "Ray Dalio", "video"],
+    isFree: true,
+  },
+  {
+    id: "me-010",
+    title: "Bureau of Labor Statistics — Economic Data",
+    url: "https://www.bls.gov/",
+    source: "BLS",
+    type: "documentation",
+    difficulty: "intermediate",
+    description:
+      "Official U.S. government source for employment, wages, inflation (CPI), and productivity data.",
+    tags: ["BLS", "employment", "CPI", "government data"],
+    isFree: true,
+  },
+  {
+    id: "me-011",
+    title: "Sector Rotation and Market Cycles",
+    url: "https://www.investopedia.com/articles/trading/05/020305.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "How different sectors outperform at different stages of the business cycle and how to position accordingly.",
+    tags: ["sector rotation", "business cycle", "sectors"],
+    isFree: true,
+  },
+  {
+    id: "me-012",
+    title: "Federal Funds Rate and Its Impact",
+    url: "https://www.investopedia.com/terms/f/federalfundsrate.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How the Fed sets the federal funds rate and its cascading effects on lending, mortgages, and the broader economy.",
+    tags: ["federal funds rate", "Fed", "monetary policy"],
+    isFree: true,
+  },
+];

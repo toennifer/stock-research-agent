@@ -1,0 +1,136 @@
+import { Resource } from "./types";
+
+export const secFilingsResources: Resource[] = [
+  {
+    id: "sf-001",
+    title: "How to Read a 10-K",
+    url: "https://www.investopedia.com/terms/1/10-k.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "What a 10-K annual report contains, its key sections, and how to use it for fundamental research.",
+    tags: ["10-K", "annual report", "SEC filing"],
+    isFree: true,
+  },
+  {
+    id: "sf-002",
+    title: "How to Read a 10-Q",
+    url: "https://www.investopedia.com/terms/1/10q.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Understanding the quarterly 10-Q filing, what it covers, and how it differs from the annual 10-K.",
+    tags: ["10-Q", "quarterly report", "SEC filing"],
+    isFree: true,
+  },
+  {
+    id: "sf-003",
+    title: "What Is an 8-K Filing?",
+    url: "https://www.investopedia.com/terms/1/8-k.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "The 8-K current report filed for major events like mergers, executive changes, or bankruptcy.",
+    tags: ["8-K", "current report", "material events"],
+    isFree: true,
+  },
+  {
+    id: "sf-004",
+    title: "SEC EDGAR — Company Search",
+    url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany",
+    source: "SEC",
+    type: "interactive",
+    difficulty: "beginner",
+    description:
+      "Official SEC tool to search for any public company's filings by name, ticker, or CIK number.",
+    tags: ["EDGAR", "company search", "SEC", "tool"],
+    isFree: true,
+  },
+  {
+    id: "sf-005",
+    title: "SEC EDGAR Full-Text Search",
+    url: "https://efts.sec.gov/LATEST/search-index?q=%22&dateRange=custom&startdt=2024-01-01&enddt=2024-12-31",
+    source: "SEC",
+    type: "interactive",
+    difficulty: "intermediate",
+    description:
+      "Search the full text of SEC filings for specific keywords, phrases, or topics across all public companies.",
+    tags: ["EDGAR", "full-text search", "SEC", "tool"],
+    isFree: true,
+  },
+  {
+    id: "sf-006",
+    title: "How Do I Use EDGAR?",
+    url: "https://www.sec.gov/search-filings/edgar-search-assistance/how-do-i-use-edgar",
+    source: "SEC",
+    type: "documentation",
+    difficulty: "beginner",
+    description:
+      "Official SEC guide to navigating and using the EDGAR filing system effectively.",
+    tags: ["EDGAR", "guide", "SEC", "navigation"],
+    isFree: true,
+  },
+  {
+    id: "sf-007",
+    title: "Proxy Statement (DEF 14A) Explained",
+    url: "https://www.investopedia.com/terms/p/proxystatement.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "What proxy statements disclose about executive compensation, board composition, and shareholder voting matters.",
+    tags: ["proxy statement", "DEF 14A", "executive compensation"],
+    isFree: true,
+  },
+  {
+    id: "sf-008",
+    title: "Understanding Annual Reports",
+    url: "https://www.investopedia.com/terms/a/annualreport.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Overview of what annual reports contain beyond financial statements, including management discussion and analysis.",
+    tags: ["annual report", "MD&A", "shareholder letter"],
+    isFree: true,
+  },
+  {
+    id: "sf-009",
+    title: "Form 4 — Insider Trading Filings",
+    url: "https://www.investopedia.com/terms/f/form4.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How to read Form 4 filings that disclose insider buying and selling activity by company officers and directors.",
+    tags: ["Form 4", "insider trading", "officers", "directors"],
+    isFree: true,
+  },
+  {
+    id: "sf-010",
+    title: "SEC Filing Types: Complete Guide",
+    url: "https://www.investopedia.com/articles/fundamental-analysis/08/sec-forms.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "Reference guide to the most important SEC filing types including 10-K, 10-Q, 8-K, S-1, DEF 14A, and more.",
+    tags: ["filing types", "reference", "S-1", "overview"],
+    isFree: true,
+  },
+  {
+    id: "sf-011",
+    title: "S-1 Filing: What You Need to Know",
+    url: "https://www.investopedia.com/terms/s/sec-form-s-1.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "Understanding the S-1 registration statement filed by companies going public through an IPO.",
+    tags: ["S-1", "IPO", "registration statement"],
+    isFree: true,
+  },
+];

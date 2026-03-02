@@ -1,0 +1,148 @@
+import { Resource } from "./types";
+
+export const optionsDerivativesResources: Resource[] = [
+  {
+    id: "od-001",
+    title: "Options Basics Tutorial",
+    url: "https://www.investopedia.com/options-basics-tutorial-4583012",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Comprehensive introduction to options, including what they are, how they work, and basic terminology.",
+    tags: ["options", "calls", "puts", "basics"],
+    isFree: true,
+  },
+  {
+    id: "od-002",
+    title: "Call Options Explained",
+    url: "https://www.investopedia.com/terms/c/calloption.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "What call options are, how they profit, and when to use them as part of a bullish strategy.",
+    tags: ["call option", "bullish", "premium"],
+    isFree: true,
+  },
+  {
+    id: "od-003",
+    title: "Put Options Explained",
+    url: "https://www.investopedia.com/terms/p/putoption.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Understanding put options, how they provide downside protection, and when to buy or sell them.",
+    tags: ["put option", "bearish", "hedging"],
+    isFree: true,
+  },
+  {
+    id: "od-004",
+    title: "The Greeks: Understanding Options Pricing",
+    url: "https://www.investopedia.com/terms/g/greeks.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "Delta, gamma, theta, vega, and rho — how each Greek measures sensitivity of an option's price to different factors.",
+    tags: ["Greeks", "delta", "gamma", "theta", "vega"],
+    isFree: true,
+  },
+  {
+    id: "od-005",
+    title: "Implied Volatility",
+    url: "https://www.investopedia.com/terms/i/iv.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How implied volatility reflects market expectations and influences options premiums.",
+    tags: ["implied volatility", "IV", "premium", "pricing"],
+    isFree: true,
+  },
+  {
+    id: "od-006",
+    title: "Covered Call Strategy",
+    url: "https://www.investopedia.com/terms/c/coveredcall.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How to generate income by selling call options on stocks you already own, with risk/reward analysis.",
+    tags: ["covered call", "income", "strategy"],
+    isFree: true,
+  },
+  {
+    id: "od-007",
+    title: "What Are Derivatives?",
+    url: "https://www.investopedia.com/terms/d/derivative.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Overview of financial derivatives including futures, forwards, swaps, and options and how they derive value from underlying assets.",
+    tags: ["derivatives", "futures", "swaps", "overview"],
+    isFree: true,
+  },
+  {
+    id: "od-008",
+    title: "Introduction to Futures — CME Group",
+    url: "https://www.cmegroup.com/education/courses/introduction-to-futures.html",
+    source: "CME Group",
+    type: "course",
+    difficulty: "intermediate",
+    description:
+      "Free educational course from the world's largest futures exchange covering futures mechanics, margins, and settlement.",
+    tags: ["futures", "CME", "margins", "course"],
+    isFree: true,
+  },
+  {
+    id: "od-009",
+    title: "Black-Scholes Model",
+    url: "https://www.investopedia.com/terms/b/blackscholes.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "The foundational options pricing model, its assumptions, formula, and practical limitations.",
+    tags: ["Black-Scholes", "pricing model", "options pricing"],
+    isFree: true,
+  },
+  {
+    id: "od-010",
+    title: "Options Profit Calculator",
+    url: "https://www.optionsprofitcalculator.com/",
+    source: "OptionsProfitCalculator",
+    type: "interactive",
+    difficulty: "intermediate",
+    description:
+      "Free tool to visualize potential profit and loss for options strategies at different prices and dates.",
+    tags: ["calculator", "P&L", "strategy", "tool"],
+    isFree: true,
+  },
+  {
+    id: "od-011",
+    title: "tastylive — Options Strategies",
+    url: "https://www.tastylive.com/concepts-strategies",
+    source: "tastylive",
+    type: "video",
+    difficulty: "intermediate",
+    description:
+      "Video library covering options strategies from basic to advanced, with trade mechanics and probability analysis.",
+    tags: ["strategies", "video", "probability"],
+    isFree: true,
+  },
+  {
+    id: "od-012",
+    title: "CBOE Options Education",
+    url: "https://www.cboe.com/education/",
+    source: "CBOE",
+    type: "documentation",
+    difficulty: "advanced",
+    description:
+      "Educational resources from the Chicago Board Options Exchange covering options mechanics, strategies, and VIX.",
+    tags: ["CBOE", "VIX", "exchange", "education"],
+    isFree: true,
+  },
+];

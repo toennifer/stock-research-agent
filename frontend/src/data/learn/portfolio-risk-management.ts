@@ -1,0 +1,148 @@
+import { Resource } from "./types";
+
+export const portfolioRiskManagementResources: Resource[] = [
+  {
+    id: "pr-001",
+    title: "Diversification: What It Is and How It Works",
+    url: "https://www.investopedia.com/terms/d/diversification.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Why diversification reduces risk, the difference between systematic and unsystematic risk, and how to diversify effectively.",
+    tags: ["diversification", "risk reduction", "portfolio"],
+    isFree: true,
+  },
+  {
+    id: "pr-002",
+    title: "Asset Allocation",
+    url: "https://www.investopedia.com/terms/a/assetallocation.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "How to divide investments among stocks, bonds, and cash based on goals, risk tolerance, and time horizon.",
+    tags: ["asset allocation", "stocks", "bonds", "strategy"],
+    isFree: true,
+  },
+  {
+    id: "pr-003",
+    title: "Modern Portfolio Theory (MPT)",
+    url: "https://www.investopedia.com/terms/m/modernportfoliotheory.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "Harry Markowitz's framework for constructing portfolios that maximize expected return for a given level of risk.",
+    tags: ["MPT", "Markowitz", "efficient frontier", "theory"],
+    isFree: true,
+  },
+  {
+    id: "pr-004",
+    title: "Sharpe Ratio",
+    url: "https://www.investopedia.com/terms/s/sharperatio.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How the Sharpe ratio measures risk-adjusted returns and helps compare the performance of different investments.",
+    tags: ["Sharpe ratio", "risk-adjusted", "performance"],
+    isFree: true,
+  },
+  {
+    id: "pr-005",
+    title: "Dollar-Cost Averaging",
+    url: "https://www.investopedia.com/terms/d/dollarcostaveraging.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "beginner",
+    description:
+      "Investing a fixed amount at regular intervals to reduce the impact of volatility on the overall purchase price.",
+    tags: ["DCA", "dollar-cost averaging", "investing strategy"],
+    isFree: true,
+  },
+  {
+    id: "pr-006",
+    title: "Rebalancing Your Portfolio",
+    url: "https://www.investopedia.com/terms/r/rebalancing.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "When and how to rebalance your portfolio to maintain your target asset allocation as market values shift.",
+    tags: ["rebalancing", "asset allocation", "maintenance"],
+    isFree: true,
+  },
+  {
+    id: "pr-007",
+    title: "Khan Academy: Saving & Investing",
+    url: "https://www.khanacademy.org/college-careers-more/financial-literacy",
+    source: "Khan Academy",
+    type: "course",
+    difficulty: "beginner",
+    description:
+      "Free course covering the basics of saving, compound interest, and investing for long-term financial goals.",
+    tags: ["saving", "investing", "compound interest", "course"],
+    isFree: true,
+  },
+  {
+    id: "pr-008",
+    title: "Efficient Frontier",
+    url: "https://www.investopedia.com/terms/e/efficientfrontier.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "The set of optimal portfolios offering the highest expected return for each level of risk, as defined by MPT.",
+    tags: ["efficient frontier", "MPT", "optimization"],
+    isFree: true,
+  },
+  {
+    id: "pr-009",
+    title: "Portfolio Visualizer — Backtest Asset Allocation",
+    url: "https://www.portfoliovisualizer.com/backtest-asset-allocation",
+    source: "Portfolio Visualizer",
+    type: "interactive",
+    difficulty: "intermediate",
+    description:
+      "Tool for backtesting portfolio allocations with historical data, comparing asset mixes, and analyzing risk metrics.",
+    tags: ["backtest", "tool", "asset allocation", "historical"],
+    isFree: true,
+  },
+  {
+    id: "pr-010",
+    title: "Value at Risk (VaR)",
+    url: "https://www.investopedia.com/terms/v/var.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "advanced",
+    description:
+      "How VaR estimates the maximum potential loss of a portfolio over a given time period at a specified confidence level.",
+    tags: ["VaR", "value at risk", "risk measurement"],
+    isFree: true,
+  },
+  {
+    id: "pr-011",
+    title: "Beta: Measuring Systematic Risk",
+    url: "https://www.investopedia.com/terms/b/beta.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How beta quantifies a stock's volatility relative to the overall market and what it means for portfolio risk.",
+    tags: ["beta", "systematic risk", "volatility", "market risk"],
+    isFree: true,
+  },
+  {
+    id: "pr-012",
+    title: "Correlation and Portfolio Diversification",
+    url: "https://www.investopedia.com/terms/c/correlation.asp",
+    source: "Investopedia",
+    type: "article",
+    difficulty: "intermediate",
+    description:
+      "How asset correlation affects portfolio risk and why low-correlation assets improve diversification.",
+    tags: ["correlation", "diversification", "risk"],
+    isFree: true,
+  },
+];

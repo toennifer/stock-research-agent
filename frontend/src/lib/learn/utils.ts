@@ -1,5 +1,6 @@
-import { CategorySlug, Resource } from "@/data/learn/types";
+import { CategorySlug, FilingExample, Resource } from "@/data/learn/types";
 import { categories } from "@/data/learn/categories";
+import { filingExamples } from "@/data/learn/filing-examples";
 import { fundamentalAnalysisResources } from "@/data/learn/fundamental-analysis";
 import { technicalAnalysisResources } from "@/data/learn/technical-analysis";
 import { optionsDerivativesResources } from "@/data/learn/options-derivatives";
@@ -26,4 +27,8 @@ export function getCategoryBySlug(slug: string) {
 
 export function getResourceCount(slug: CategorySlug): number {
   return resourceMap[slug]?.length ?? 0;
+}
+
+export function getFilingExamples(): FilingExample[] {
+  return filingExamples;
 }

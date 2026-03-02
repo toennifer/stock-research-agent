@@ -34,3 +34,23 @@ export interface Category {
   icon: string;
   color: string;
 }
+
+export type SectionImportance = "critical" | "important" | "useful";
+
+export interface FilingSection {
+  name: string;
+  description: string;
+  whyItMatters: string;
+  importance: SectionImportance;
+}
+
+export interface FilingExample {
+  id: string;
+  filingType: string;
+  company: string;
+  ticker: string;
+  filingDate: string;
+  edgarUrl: string;
+  summary: string;
+  sections: FilingSection[];
+}

@@ -1,2 +1,54 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* ─── Print stylesheet for Save as PDF ─── */
+@media print {
+  /* Hide everything except the report */
+  nav,
+  form,
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  /* Remove page background and padding */
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Remove the report card border/shadow so it fills the page */
+  #analysis-report {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep the header border for visual separation */
+  #analysis-report > div:first-child {
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  /* Ensure tables don't break across pages awkwardly */
+  table {
+    page-break-inside: avoid;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* Give it a clean margin */
+  @page {
+    margin: 1.5cm;
+  }
+}

@@ -3,13 +3,20 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+interface DataSource {
+  name: string;
+  url: string;
+  tools: string[];
+}
+
 interface AnalysisReportProps {
   ticker: string;
   markdown: string;
   isStreaming: boolean;
+  sources: DataSource[];
 }
 
-export function AnalysisReport({ ticker, markdown, isStreaming }: AnalysisReportProps) {
+export function AnalysisReport({ ticker, markdown, isStreaming, sources }: AnalysisReportProps) {
   return (
     <div id="analysis-report" className="rounded-lg border border-gray-200 bg-white">
       {/* Header */}
@@ -56,6 +63,47 @@ export function AnalysisReport({ ticker, markdown, isStreaming }: AnalysisReport
       <div className="prose prose-sm max-w-none px-6 py-6 prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-th:text-left prose-th:text-gray-700 prose-td:text-gray-600">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
       </div>
+
+      {/* Data Sources */}
+      {!isStreaming && sources.length > 0 && (
+        <div className="border-t border-gray-200 px-6 py-4">
+          <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-500">
+            Data Sources
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {sources.map((source) => (
+              <a
+                key={source.name}
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 transition-colors hover:border-blue-300 hover:bg-blue-50"
+              >
+                <div className="min-w-0">
+                  <span className="flex items-center gap-1 text-sm font-medium text-gray-900 group-hover:text-blue-700">
+                    {source.name}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      className="h-3 w-3 text-gray-400 group-hover:text-blue-500"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-xs text-gray-500">
+                    {source.tools.join(" · ")}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Disclaimer footer */}
       {!isStreaming && markdown && (

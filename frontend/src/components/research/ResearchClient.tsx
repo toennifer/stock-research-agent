@@ -7,10 +7,17 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 type Status = "idle" | "loading" | "streaming" | "done" | "error";
 
+export interface DataSource {
+  name: string;
+  url: string;
+  tools: string[];
+}
+
 export function ResearchClient() {
   const [ticker, setTicker] = useState("");
   const [activeTicker, setActiveTicker] = useState("");
   const [markdown, setMarkdown] = useState("");
+  const [sources, setSources] = useState<DataSource[]>([]);
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const abortRef = useRef<AbortController | null>(null);
@@ -30,6 +37,7 @@ export function ResearchClient() {
 
     setActiveTicker(symbol);
     setMarkdown("");
+    setSources([]);
     setError("");
     setStatus("loading");
 
@@ -70,6 +78,8 @@ export function ResearchClient() {
             const event = JSON.parse(payload);
             if (event.type === "text") {
               setMarkdown((prev) => prev + event.content);
+            } else if (event.type === "sources") {
+              setSources(event.sources);
             } else if (event.type === "done") {
               setStatus("done");
             } else if (event.type === "error") {
@@ -136,6 +146,7 @@ export function ResearchClient() {
             ticker={activeTicker}
             markdown={markdown}
             isStreaming={status === "streaming"}
+            sources={sources}
           />
         </div>
       )}

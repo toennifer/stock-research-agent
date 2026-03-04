@@ -104,6 +104,64 @@ async function executeTool(name: string, input: { ticker: string }): Promise<str
   }
 }
 
+// ── Source metadata builder ─────────────────────────────────────────
+
+interface DataSource {
+  name: string;
+  url: string;
+  tools: string[];
+}
+
+function buildSourceMetadata(
+  executedTools: string[],
+  ticker: string,
+): DataSource[] {
+  const hasFinnhub = !!process.env.FINNHUB_API_KEY;
+
+  const toolToSource: Record<string, { sourceName: string; label: string }> = {
+    get_market_data: { sourceName: "Yahoo Finance", label: "Market data & technicals" },
+    get_earnings_info: { sourceName: "Yahoo Finance", label: "Earnings data" },
+    get_news_sentiment: {
+      sourceName: hasFinnhub ? "Finnhub" : "Yahoo Finance",
+      label: "News & sentiment",
+    },
+    get_sector_context: { sourceName: "Yahoo Finance", label: "Sector context" },
+  };
+
+  // Group tools by source, preserving insertion order
+  const sourceMap = new Map<string, { url: string; tools: string[] }>();
+
+  for (const tool of executedTools) {
+    const mapping = toolToSource[tool];
+    if (!mapping) continue;
+
+    const existing = sourceMap.get(mapping.sourceName);
+    if (existing) {
+      existing.tools.push(mapping.label);
+    } else {
+      const url =
+        mapping.sourceName === "Yahoo Finance"
+          ? `https://finance.yahoo.com/quote/${ticker}`
+          : "https://finnhub.io";
+      sourceMap.set(mapping.sourceName, { url, tools: [mapping.label] });
+    }
+  }
+
+  // Always include Claude as the AI synthesis source
+  sourceMap.set("Claude by Anthropic", {
+    url: "https://anthropic.com",
+    tools: ["AI analysis & synthesis"],
+  });
+
+  return Array.from(sourceMap.entries()).map(([name, { url, tools }]) => ({
+    name,
+    url,
+    tools,
+  }));
+}
+
+// ── Route handler ───────────────────────────────────────────────────
+
 const TICKER_PATTERN = /^[A-Z]{1,5}$/;
 
 export async function POST(request: Request) {
@@ -161,6 +219,11 @@ export async function POST(request: Request) {
               };
             }),
           );
+
+          // Send data source metadata to the client
+          const executedToolNames = toolUseBlocks.map((b) => b.name);
+          const sources = buildSourceMetadata(executedToolNames, ticker);
+          send({ type: "sources", sources });
 
           // Step 3: Send tool results and stream the analysis
           messages.push({ role: "assistant", content: toolResponse.content });

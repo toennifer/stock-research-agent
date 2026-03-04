@@ -1,0 +1,8 @@
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.local
+**/.DS_Store
+**/aapl_report_*.txt
+**/tsm_report_*.txt
